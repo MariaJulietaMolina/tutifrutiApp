@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-const categories = ['Nombre', 'País', 'Animal', 'Color', 'Fruta']; // Lista de categorías
+const categories = ['Nombre', 'País', 'Animal', 'Color', 'Fruta']; // categorías
 
 const TutifrutiApp = () => {
   const [currentCategory, setCurrentCategory] = useState('');
   const [completedCategories, setCompletedCategories] = useState([]);
-  const [timer, setTimer] = useState(60); // Tiempo inicial del temporizador
+  const [timer, setTimer] = useState(1200); // tiempo inicial
 
-  // Función para iniciar el temporizador
+  // inicia un temporizador
   useEffect(() => {
     const interval = setInterval(() => {
       setTimer(prevTimer => {
         if (prevTimer === 0) {
           clearInterval(interval);
-          // Aquí puedes agregar lógica para manejar el fin del juego
+          // lógica para manejar el fin del juego
         }
         return prevTimer - 1;
       });

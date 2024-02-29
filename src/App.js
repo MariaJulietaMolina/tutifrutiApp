@@ -1,12 +1,13 @@
 import React from 'react';
-import TutifrutiApp from './TutifrutiApp';
+import './output.css'; 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <TutifrutiApp />
+    <div className="bg-gray-200 p-4">
+      <h1 className="text-2xl font-bold text-center">¡Hola, mundo!</h1>
+      <p className="text-gray-800 mt-4">¡Bienvenido a mi aplicación con Tailwind CSS!</p>
     </div>
   );
-}
+};
 
 export default App;
